@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import NavTabs from './NavTabs';
 import Home from './pages/Home';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+import Navbar from './Navbar';
 
 function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -14,8 +14,8 @@ function PortfolioContainer() {
 
   return (
     <div>
-      <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-      Based on `currentPage`, render the appropriate component here.
+      <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
+      Render the appropriate component here.
     </div>
   );
 }
